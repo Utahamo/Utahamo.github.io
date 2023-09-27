@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-18T15:17:55.000Z</updated>
+  <updated>2023-09-27T16:53:25.056Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unraid盘符的只读问题修复</title>
+    <link href="http://example.com/2023/09/28/unraid%E7%9B%98%E7%AC%A6%E5%8F%AA%E8%AF%BB%E4%BA%8B%E4%BB%B6/"/>
+    <id>http://example.com/2023/09/28/unraid%E7%9B%98%E7%AC%A6%E5%8F%AA%E8%AF%BB%E4%BA%8B%E4%BB%B6/</id>
+    <published>2023-09-27T16:51:34.037Z</published>
+    <updated>2023-09-27T16:53:25.056Z</updated>
+    
+    <content type="html"><![CDATA[<p>一开始以为是unraid的问题, 就去找unraid相关的帖子看看有没有解决办法</p><p>但是并没有, 这让我很头疼, 于是先开了unraid的命令行看一下情况</p><p>df -h看起来没啥问题 (图片是后来修好了之后才截的, 不过复现也很简单就不节外生枝了)</p><p><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309260732559.png" alt="image-20230926073216523"></p><p>mount查看一下挂载情况</p><p><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309260733970.png" alt="image-20230926073332944"></p><p>在这里能看到挂载情况是ro (图同上, 把rw看成ro就可以)</p><p>我们unmount一下再重新挂载看看</p><p>没有unmount命令, 加上unraid这个系统没找到包管理器, 想别的办法</p><p><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309260734374.png" alt="image-20230926073439349"></p><p>因为再webui里面有unmount, 就直接用了</p><p>之后使用<code>mount /dev/nvme0n1p3 /mnt/disks/ZTA21T0KA230550818-part3</code>手动挂载</p><p>报错, 显示windows的缓存还在 (图片引用了别人的, 我忘记截图了)</p><p><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309260737776.png" alt="image-20230926073727753"></p><p>另外查看这块盘上的内容可以发现有个132g的hiberfile.sys, 这东西就是windows的休眠文件, 根据已有信息, 判断windows自动修复的时候把快速启动选项给重新开启了, 所以才会生成这种文件</p><p>试了几种方法, 我这里启动这块盘上的windows, 关闭快速启动后还是只读, 于是再次开启windows发现hiberfile.sys还在, 于是使用</p><p><code>powercfg -h off</code> 命令彻底关闭, 查看磁盘发现hiberfile文件已删除</p><p>重新启动, 问题解决</p><p>这里我其实也试了<code>sudo ntfs-3g -o remove_hiberfile /dev/nvme0n1p3 /mnt/disks/ZTA21T0KA230550818-part3</code></p><p>不过无法挂载, 所以才找了别的方法</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一开始以为是unraid的问题, 就去找unraid相关的帖子看看有没有解决办法&lt;/p&gt;
+&lt;p&gt;但是并没有, 这让我很头疼, 于是先开了unraid的命令行看一下情况&lt;/p&gt;
+&lt;p&gt;df -h看起来没啥问题 (图片是后来修好了之后才截的, 不过复现也很简单就不节外生枝了)&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="Unraid, 运维" scheme="http://example.com/tags/Unraid-%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -58,32 +82,6 @@
     
     
     <category term="CTF, docker" scheme="http://example.com/tags/CTF-docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test2</title>
-    <link href="http://example.com/2023/09/23/test2/"/>
-    <id>http://example.com/2023/09/23/test2/</id>
-    <published>2023-09-22T16:30:10.000Z</published>
-    <updated>2023-09-22T16:30:10.000Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test1</title>
-    <link href="http://example.com/2023/09/23/test1/"/>
-    <id>http://example.com/2023/09/23/test1/</id>
-    <published>2023-09-22T16:30:01.000Z</published>
-    <updated>2023-09-22T16:30:01.000Z</updated>
-    
-    
-    
-    
     
   </entry>
   
