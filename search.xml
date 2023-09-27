@@ -43,7 +43,8 @@
 <p>不过无法挂载, 所以才找了别的方法</p>
 ]]></content>
       <tags>
-        <tag>Unraid, 运维</tag>
+        <tag>Unraid</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -101,7 +102,8 @@
 
 ]]></content>
       <tags>
-        <tag>CTF, docker</tag>
+        <tag>CTF</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
